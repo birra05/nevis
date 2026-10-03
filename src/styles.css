@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/Inter-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/InterDisplay-Regular.woff2') format('woff2');
+}
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Inter Display', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-canvas: #f7f5ed;
+  --color-surface: #ffffff;
+  --color-foreground: #141413;
+  --color-foreground-muted: rgb(20 20 19 / 60%);
+  --color-border-subtle: rgb(20 20 19 / 8%);
+  --color-row-hover: rgb(20 20 19 / 4%);
+  --color-chart-grid: rgb(20 20 19 / 16%);
+  --color-chart-existing: #b29df8;
+  --color-chart-organic: #f4beb4;
+  --color-chart-paid: #a75e6e;
+}
+
+@layer base {
+  body {
+    @apply m-0 min-w-0 bg-canvas font-sans text-foreground antialiased;
+  }
+
+  button {
+    font: inherit;
+  }
+}
